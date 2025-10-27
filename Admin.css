@@ -1,0 +1,755 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f6fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+.navbar {
+    background-color: #2c3e50;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 2rem;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #3498db;
+}
+
+.customer-link {
+    background-color: #e74c3c;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.customer-link:hover {
+    background-color: #c0392b;
+    color: white !important;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Section Styles - DIUBAH untuk konsistensi */
+section {
+    padding: 130px 0 50px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+/* Dashboard Section */
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-top: 4px solid #3498db;
+}
+
+.stat-card h3 {
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.stat-card p {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Field Info Section - DIPERBAIKI untuk konsistensi */
+.field-info {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.field-info h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.field-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.field-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    min-height: 300px; /* DITAMBAHKAN untuk konsistensi tinggi */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.field-card h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.field-count {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Price Info Styles - DIPERBAIKI untuk konsistensi */
+.price-info {
+    margin-top: 15px;
+}
+
+.price-info p {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.price-info p:first-child {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+}
+
+/* Booking Section */
+.booking {
+    background-color: white;
+    margin: 30px 0;
+    padding: 50px 0;
+}
+
+#booking-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Style untuk input readonly */
+.form-group input[readonly] {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border-color: #e9ecef;
+}
+
+.submit-btn {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #219653;
+}
+
+/* Style untuk waktu yang tidak tersedia */
+select option:disabled {
+    color: #999;
+    background-color: #f5f5f5;
+}
+
+/* Style untuk form validation */
+input:invalid, select:invalid {
+    border-color: #e74c3c;
+}
+
+input:valid, select:valid {
+    border-color: #27ae60;
+}
+
+/* Warning message */
+.warning-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.time-slot-info {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+/* PERBAIKAN: Style khusus untuk sel waktu lewat - DIPERBAIKI */
+.past-booked-cell {
+    background: #fef2f2 !important;
+    border-left: 3px solid #dc2626 !important;
+}
+
+.past-available-cell {
+    background: #f9fafb !important;
+    border-left: 3px solid #9ca3af !important;
+}
+
+.booked-cell {
+    background: #fef2f2 !important;
+    border-left: 3px solid #ef4444 !important;
+}
+
+.available-cell {
+    background: #f0fdf4 !important;
+    border-left: 3px solid #22c55e !important;
+}
+
+.ongoing-cell {
+    background: #fffbeb !important;
+    border-left: 3px solid #f59e0b !important;
+}
+
+/* PERBAIKAN: Status badges yang lebih jelas */
+.status-past-booked {
+    background: #fed7d7;
+    color: #7f1d1d;
+    border: 1px solid #fecaca;
+    font-weight: 600;
+}
+
+.status-past-available {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    font-weight: 500;
+}
+
+/* PERBAIKAN: Status untuk waktu lewat yang ADA booking sebelumnya */
+.status-past-booked {
+    background: #fed7d7;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+}
+
+/* PERBAIKAN: Status untuk waktu lewat yang TIDAK ADA booking */
+.status-past-available {
+    background: #f3f4f6;
+    color: #9ca3af;
+    border: 1px solid #d1d5db;
+}
+
+/* PERBAIKAN: Style khusus untuk sel waktu lewat */
+.past-booked-cell {
+    background: #fef2f2 !important;
+}
+
+.past-available-cell {
+    background: #f9fafb !important;
+}
+
+/* Manage Section */
+.management-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-group {
+    display: flex;
+    flex: 2;
+    min-width: 300px;
+}
+
+.search-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-group button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.filter-group {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    min-width: 300px;
+}
+
+.filter-group select,
+.filter-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.filter-group button {
+    background-color: #95a5a6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.management-list {
+    display: grid;
+    gap: 20px;
+}
+
+.management-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+}
+
+.management-card.badminton {
+    border-left-color: #9b59b6; /* Warna khusus untuk badminton */
+}
+
+.management-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.management-header h3 {
+    color: #2c3e50;
+}
+
+.management-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.edit-btn {
+    background-color: #f39c12;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.management-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+/* Style untuk info pembayaran */
+.payment-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    grid-column: 1 / -1;
+}
+
+.payment-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-bottom: 2px;
+}
+
+.payment-value {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.payment-status {
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Style untuk status pembayaran */
+.status-pending {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.status-paid {
+    background-color: #27ae60;
+    color: white;
+}
+
+.status-partial {
+    background-color: #f39c12;
+    color: white;
+}
+
+/* Status waktu booking */
+.time-status {
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.time-status.upcoming {
+    background-color: #3498db;
+    color: white;
+}
+
+.time-status.ongoing {
+    background-color: #27ae60;
+    color: white;
+}
+
+.time-status.completed {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 0;
+        padding: 15px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .management-controls {
+        flex-direction: column;
+    }
+    
+    .search-group {
+        flex-direction: column;
+    }
+    
+    .search-group button {
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+    }
+    
+    .field-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .field-card {
+        min-height: auto; /* Diatur ulang untuk mobile */
+    }
+    
+    .management-header {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+    
+    .management-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .payment-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==================== PERBAIKAN UTAMA: INPUT DATE DENGAN ICON KALENDER YANG BISA DIKLIK ==================== */
+
+/* Style untuk semua input date di aplikasi */
+input[type="date"] {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    /* Reset semua properti yang mungkin menghalangi */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-width: 150px;
+}
+
+/* Style khusus untuk WebKit browsers (Chrome, Safari, Edge) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    z-index: 3;
+    opacity: 1; /* Pastikan tidak transparan */
+}
+
+/* Style untuk Firefox */
+input[type="date"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Style untuk Internet Explorer */
+input[type="date"]::-ms-clear {
+    display: none;
+}
+
+input[type="date"]::-ms-reveal {
+    display: none;
+}
+
+/* Hover dan focus states */
+input[type="date"]:hover {
+    border-color: #3b82f6;
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Pastikan container tidak menghalangi */
+.table-controls .filter-group,
+.form-group {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hapus semua pseudo-element yang mungkin menutupi */
+.table-controls::before,
+.table-controls::after,
+.filter-group::before,
+.filter-group::after {
+    display: none !important;
+}
+
+/* Style khusus untuk input date di form booking */
+#booking-form input[type="date"] {
+    width: 100%;
+}
+
+/* Style khusus untuk input date di management controls */
+.management-controls input[type="date"] {
+    flex: 1;
+    min-width: auto;
+}

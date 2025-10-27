@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Booking Mini Soccer - Sport Arena</title>
+    <link rel="stylesheet" href="MiniSoccer.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">Sport Arena - Mini Soccer</h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="Badminton.html">Badminton</a></li>
+                    <li><a href="Login.html" class="admin-link">Admin</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="reservations">
+        <div class="container">
+            <h2 class="section-title">Jadwal Booking Lapangan Mini Soccer</h2>
+            
+            <div class="reservation-info">
+                <p>📅 <strong>Informasi Booking:</strong> Berikut adalah jadwal booking lapangan mini soccer dalam format tabel. Untuk informasi ketersediaan dan pemesanan, silakan hubungi admin via WhatsApp.</p>
+                <p style="color: #10b981; font-weight: bold;">🔄 <strong>Real-time Update:</strong> Jadwal akan otomatis diperbarui ketika ada perubahan dari admin.</p>
+                <p style="color: #f59e0b; font-weight: bold;">⏰ <strong>Auto Cleanup:</strong> Booking yang sudah lewat waktu akan otomatis dihitung selesai dan tidak termasuk dalam jumlah booking aktif.</p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="quick-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="booked-fields">0</span>
+                    <span class="stat-label">Lapangan Terbooking Hari Ini</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="total-bookings">0</span>
+                    <span class="stat-label">Total Booking Aktif</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="completed-today">0</span>
+                    <span class="stat-label">Selesai Hari Ini</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="last-update">-</span>
+                    <span class="stat-label">Update Terakhir</span>
+                </div>
+            </div>
+
+            <!-- Table Controls - LAYOUT BARU DALAM SATU BARIS -->
+            <div class="table-controls">
+                <div class="table-controls-row">
+                    <div class="filter-group">
+                        <label for="filter-start-date">Rentang Tanggal:</label>
+                        <input type="date" id="filter-start-date">
+                        <span class="date-separator">s/d</span>
+                        <input type="date" id="filter-end-date">
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="filter-field">Filter Lapangan:</label>
+                        <select id="filter-field">
+                            <option value="all">Semua Lapangan</option>
+                            <option value="1">Lapangan 1</option>
+                        </select>
+                    </div>
+
+                    <button id="reset-filter" class="reset-btn">Reset Filter</button>
+                    <button id="refresh-data" class="cta-btn primary" style="padding: 8px 16px;">
+                        🔄 Refresh Data
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Excel Table Container -->
+            <div class="table-container">
+                <div id="excel-table-container">
+                    <!-- Excel table will be generated here -->
+                </div>
+            </div>
+
+            <!-- Legend - DIPERBAIKI -->
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #d1fae5;"></div>
+                    <span>Tersedia</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #fee2e2;"></div>
+                    <span>Terbooking</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #fef3c7;"></div>
+                    <span>Sedang Berlangsung</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #fed7d7;"></div>
+                    <span>Waktu Lewat (Ada Booking)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #f3f4f6;"></div>
+                    <span>Waktu Lewat (Tidak Ada Booking)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #dbeafe;"></div>
+                    <span>Member</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #f3f4f6;"></div>
+                    <span>Umum</span>
+                </div>
+            </div>
+
+            <!-- Booking Action -->
+            <div class="booking-action">
+                <h3>Ingin Booking Lapangan?</h3>
+                <p>Hubungi admin via WhatsApp untuk informasi ketersediaan dan pemesanan</p>
+                <a href="https://wa.me/6281245333504" 
+                   class="whatsapp-btn" target="_blank">
+                    📱 Booking via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Sport Arena - Mini Soccer</h3>
+                    <p>Lapangan rumput sintetis berkualitas tinggi untuk pengalaman bermain terbaik</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Beranda</a>
+                    <a href="Badminton.html">Badminton</a>
+                    <a href="Login.html">Admin</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2023 Sport Arena. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="MiniSoccer.js"></script>
+</body>
+</html>
